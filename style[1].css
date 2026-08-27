@@ -1,0 +1,370 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-family: 'Playfair Display', serif;
+  color: #d4af37;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a.active, 
+.nav-links li a:hover {
+  color: #e67e22;
+}
+
+.register-nav-btn {
+  background-color: #f39c12;
+  color: #000 !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: background-color 0.3s;
+}
+
+.register-nav-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Feature Cards Grid */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 50px;
+}
+
+.card {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+.highlight-card {
+  border-color: #444;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Events Section */
+.events-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.carousel-controls {
+  margin-bottom: 20px;
+}
+
+.carousel-controls button {
+  background: transparent;
+  border: 1px solid #f39c12;
+  color: #f39c12;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.carousel-controls button:hover {
+  background: #f39c12;
+  color: #000;
+}
+
+.events-carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.events-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.event-card {
+  min-width: 250px;
+  height: 350px;
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.event-placeholder-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #444;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.event-card h4 {
+  position: relative;
+  z-index: 2;
+  color: #f39c12;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Registration Section Style */
+.join-virsa-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  background-color: #000000;
+  border-top: 1px solid #222;
+}
+
+.registration-container {
+  background-color: #111111;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.registration-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.registration-header h2 {
+  color: #f39c12;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.registration-header p {
+  color: #a0a0a0;
+  font-size: 1rem;
+}
+
+.virsa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  color: #ffffff;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #f39c12;
+}
+
+.form-group input[readonly] {
+  background-color: #0a0a0a;
+  color: #777;
+  cursor: not-allowed;
+}
+
+.submit-btn {
+  background-color: #f39c12;
+  color: #000000;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #e67e22;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+.form-status {
+  text-align: center;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  margin-top: -5px;
+}
+
+.form-status.success {
+  color: #4caf50;
+}
+
+.form-status.error {
+  color: #e74c3c;
+}
+
+/* Footer */
+.footer {
+  background-color: #0a0a0a;
+  padding: 50px 50px 20px;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-column h3, .brand h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.brand h2 {
+  color: #f39c12;
+}
+
+.footer-column p, .footer-column li {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li a:hover {
+  color: #f39c12;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #222;
+  padding-top: 20px;
+  color: #666;
+  font-size: 0.8rem;
+}

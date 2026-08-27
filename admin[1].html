@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virsa Admin | Registrations</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Login Screen -->
+  <div id="loginScreen" class="admin-login-screen">
+    <div class="admin-login-box">
+      <h1>VIRSA <span>Admin</span></h1>
+      <p>Sign in to view registrations</p>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Admin email" required autocomplete="username">
+        <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
+        <button type="submit">Sign In</button>
+        <p id="loginError" class="login-error"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="admin-dashboard" style="display:none;">
+    <header class="admin-header">
+      <div>
+        <h1>VIRSA <span>Admin</span></h1>
+        <p id="entryCount">Loading registrations...</p>
+      </div>
+      <div class="admin-header-actions">
+        <input type="text" id="searchBox" placeholder="Search name, roll no, email...">
+        <button id="exportBtn">Export CSV</button>
+        <button id="logoutBtn" class="logout-btn">Sign Out</button>
+      </div>
+    </header>
+
+    <main class="admin-table-wrap">
+      <table id="entriesTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Roll Number</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Batch</th>
+            <th>Reason</th>
+            <th>Submitted</th>
+          </tr>
+        </thead>
+        <tbody id="entriesBody">
+        </tbody>
+      </table>
+      <p id="emptyState" class="empty-state" style="display:none;">No registrations yet.</p>
+    </main>
+  </div>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
