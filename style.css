@@ -30,7 +30,11 @@ a {
   top: 0;
   z-index: 1000;
 }
-
+.logo-img {
+  height: 55px; 
+  width: auto; 
+  display: block;
+}
 .logo h1 {
   font-family: 'Playfair Display', serif;
   color: #d4af37;
